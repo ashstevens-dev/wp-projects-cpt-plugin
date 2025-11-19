@@ -21,9 +21,10 @@ Integrates a Projects custom post type.
 
 A. Block Theme: Create a single-projects.html template file. Use block bindings to output the post meta values: 
      <!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"projects_address"}}}}} -->
-	   <p></p>
-	   <!-- /wp:paragraph -->
-B. Standard Theme: Create a single-projects.php template file. Use the get_post_meta() function to get the post meta values.
+	 <p></p>
+	 <!-- /wp:paragraph -->
+B. Standard Theme: Create a single-projects.php template file. Use the get_post_meta() function to get the post meta values:
+     <?php $project_address = get_post_meta( get_the_ID(), 'projects_address', true ); ?>
 
 == Changelog ==
 
